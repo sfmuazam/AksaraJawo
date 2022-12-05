@@ -10,9 +10,11 @@ import android.provider.MediaStore
 import android.graphics.Bitmap
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import android.media.ThumbnailUtils
+import android.os.Build
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import androidx.annotation.RequiresApi
 import org.tensorflow.lite.codelabs.aksaraclassifier.ml.Model1
 import org.tensorflow.lite.DataType
 import java.io.IOException
@@ -25,6 +27,7 @@ class CamGalActivity : AppCompatActivity() {
     var imageView: ImageView? = null
     var result: TextView? = null
     var imageSize = 112
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camgal)
@@ -109,7 +112,7 @@ class CamGalActivity : AppCompatActivity() {
                 "wa",
                 "ya"
             )
-            result!!.text = classes[maxPos]
+            result!!.text = "Prediksi Aksara: %s\nConfidence: %2f".format(classes[maxPos], maxConfidence)
 
             // Releases model resources if no longer used.
             model.close()

@@ -3,30 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dasar"
     tools:context=".CamGalActivity">
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:id="@+id/button"
-        android:text="Take Picture"
-        android:textAllCaps="false"
-        android:layout_above="@id/button2"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        />
-    <Button
-        android:layout_width="match_parent"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
+        android:layout_above="@id/button2"
         android:layout_centerInParent="true"
-        android:id="@+id/button2"
-        android:text="Launch Gallery"
+        android:background="@drawable/tombol_bulat"
+        android:text="Ambil Gambar"
         android:textAllCaps="false"
-        android:layout_alignParentBottom="true"
+        android:textColor="@color/dasar"
         android:textSize="21sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/tombol_bulat"
+        android:text="Buka Galeri"
+        android:textAllCaps="false"
+        android:textColor="@color/dasar"
+        android:textSize="21sp"
+        android:textStyle="bold" />
     <ImageView
         android:layout_width="370sp"
         android:layout_height="370sp"
@@ -38,7 +44,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Classified as:"
+        android:textColor="@color/color_white"
+        android:text=""
         android:textStyle="bold"
         android:textSize="20sp"
         android:id="@+id/classified"
@@ -49,10 +56,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text=""
-        android:textColor="#C30000"
+        android:text="Ambil/Piih Gambar"
+        android:textColor="@color/color_white"
         android:textStyle="bold"
-        android:textSize="27sp"
+        android:textSize="20sp"
         android:id="@+id/result"
         android:layout_below="@+id/classified"
         />

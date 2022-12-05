@@ -114,7 +114,7 @@ class AksaraClassifier(private val context: Context) {
     val maxIndex = result.indices.maxByOrNull { result[it] } ?: -1
     val aksara = classes[maxIndex]
     val resultString =
-      "Prediction Result: %s\nConfidence: %2f"
+      "Prediksi Aksara: %s\nConfidence: %2f"
         .format(aksara, result[maxIndex])
 
     return resultString
